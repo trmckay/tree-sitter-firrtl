@@ -1,0 +1,20 @@
+{
+  "name": "tree-sitter-firrtl",
+  "version": "1.0.0",
+  "description": "Tree-sitter parser for FIRRTL",
+  "main": "bindings/node",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "treesitter",
+    "chisel",
+    "firrtl",
+    "parser"
+  ],
+  "author": "Trevor McKay <mail@trmckay.com>",
+  "license": "MIT",
+  "dependencies": {
+    "nan": "^2.17.0"
+  }
+}
