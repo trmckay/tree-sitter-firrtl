@@ -1,11 +1,6 @@
 [
   {
-    "type": "direction",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "expression",
+    "type": "circuit",
     "named": true,
     "fields": {},
     "children": {
@@ -13,19 +8,196 @@
       "required": true,
       "types": [
         {
-          "type": "expression",
-          "named": true
-        },
-        {
           "type": "identifier",
           "named": true
         },
         {
-          "type": "integer",
+          "type": "module",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "conditional",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "connect",
+          "named": true
+        },
+        {
+          "type": "empty",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "instance",
+          "named": true
+        },
+        {
+          "type": "invalidate",
+          "named": true
+        },
+        {
+          "type": "memory",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "node",
+          "named": true
+        },
+        {
+          "type": "partial_connect",
           "named": true
         },
         {
           "type": "primop",
+          "named": true
+        },
+        {
+          "type": "printf",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "register",
+          "named": true
+        },
+        {
+          "type": "stop",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        },
+        {
+          "type": "wire",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "conditional_valid",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "connect",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "direction",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "expression_integer",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "integer",
           "named": true
         },
         {
@@ -44,26 +216,30 @@
       "required": true,
       "types": [
         {
-          "type": "field",
-          "named": true
-        },
-        {
           "type": "identifier",
           "named": true
         },
         {
-          "type": "integer",
+          "type": "type_bundle",
+          "named": true
+        },
+        {
+          "type": "type_clock",
           "named": true
         },
         {
           "type": "type_integer",
+          "named": true
+        },
+        {
+          "type": "type_vector",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "info",
+    "type": "instance",
     "named": true,
     "fields": {},
     "children": {
@@ -71,11 +247,7 @@
       "required": true,
       "types": [
         {
-          "type": "integer",
-          "named": true
-        },
-        {
-          "type": "string",
+          "type": "identifier",
           "named": true
         }
       ]
@@ -87,7 +259,46 @@
     "fields": {}
   },
   {
-    "type": "module",
+    "type": "invalidate",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "memory",
     "named": true,
     "fields": {},
     "children": {
@@ -99,7 +310,89 @@
           "named": true
         },
         {
-          "type": "info",
+          "type": "memory_field",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "memory_field",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "type_bundle",
+          "named": true
+        },
+        {
+          "type": "type_clock",
+          "named": true
+        },
+        {
+          "type": "type_integer",
+          "named": true
+        },
+        {
+          "type": "type_vector",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "module",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional",
+          "named": true
+        },
+        {
+          "type": "connect",
+          "named": true
+        },
+        {
+          "type": "empty",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "instance",
+          "named": true
+        },
+        {
+          "type": "invalidate",
+          "named": true
+        },
+        {
+          "type": "memory",
+          "named": true
+        },
+        {
+          "type": "node",
+          "named": true
+        },
+        {
+          "type": "partial_connect",
           "named": true
         },
         {
@@ -107,7 +400,140 @@
           "named": true
         },
         {
-          "type": "statement",
+          "type": "printf",
+          "named": true
+        },
+        {
+          "type": "register",
+          "named": true
+        },
+        {
+          "type": "stop",
+          "named": true
+        },
+        {
+          "type": "wire",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mux",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "node",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "partial_connect",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
           "named": true
         }
       ]
@@ -126,23 +552,23 @@
           "named": true
         },
         {
-          "type": "field",
-          "named": true
-        },
-        {
           "type": "identifier",
           "named": true
         },
         {
-          "type": "info",
+          "type": "type_bundle",
           "named": true
         },
         {
-          "type": "integer",
+          "type": "type_clock",
           "named": true
         },
         {
           "type": "type_integer",
+          "named": true
+        },
+        {
+          "type": "type_vector",
           "named": true
         }
       ]
@@ -151,30 +577,17 @@
   {
     "type": "primop",
     "named": true,
-    "fields": {}
-  },
-  {
-    "type": "statement",
-    "named": true,
     "fields": {},
     "children": {
       "multiple": true,
       "required": false,
       "types": [
         {
-          "type": "expression",
+          "type": "conditional_valid",
           "named": true
         },
         {
-          "type": "field",
-          "named": true
-        },
-        {
-          "type": "identifier",
-          "named": true
-        },
-        {
-          "type": "info",
+          "type": "expression_integer",
           "named": true
         },
         {
@@ -182,7 +595,54 @@
           "named": true
         },
         {
-          "type": "statement",
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "printf",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
           "named": true
         },
         {
@@ -190,7 +650,225 @@
           "named": true
         },
         {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "reference",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "register",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        },
+        {
+          "type": "type_bundle",
+          "named": true
+        },
+        {
+          "type": "type_clock",
+          "named": true
+        },
+        {
           "type": "type_integer",
+          "named": true
+        },
+        {
+          "type": "type_vector",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "stop",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subaccess",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "subfield",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "conditional_valid",
+          "named": true
+        },
+        {
+          "type": "expression_integer",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mux",
+          "named": true
+        },
+        {
+          "type": "primop",
+          "named": true
+        },
+        {
+          "type": "reference",
+          "named": true
+        },
+        {
+          "type": "subaccess",
+          "named": true
+        },
+        {
+          "type": "subfield",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "type_bundle",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "field",
           "named": true
         }
       ]
@@ -212,15 +890,62 @@
     }
   },
   {
-    "type": "word",
+    "type": "type_vector",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "integer",
+          "named": true
+        },
+        {
+          "type": "type_bundle",
+          "named": true
+        },
+        {
+          "type": "type_clock",
+          "named": true
+        },
+        {
+          "type": "type_integer",
+          "named": true
+        },
+        {
+          "type": "type_vector",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "wire",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
       "required": true,
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "type_bundle",
+          "named": true
+        },
+        {
+          "type": "type_clock",
+          "named": true
+        },
+        {
+          "type": "type_integer",
+          "named": true
+        },
+        {
+          "type": "type_vector",
           "named": true
         }
       ]
@@ -268,10 +993,6 @@
   },
   {
     "type": ">",
-    "named": false
-  },
-  {
-    "type": "@",
     "named": false
   },
   {
@@ -327,15 +1048,11 @@
     "named": false
   },
   {
-    "type": "clock",
-    "named": false
-  },
-  {
     "type": "cvt",
     "named": false
   },
   {
-    "type": "data-_type",
+    "type": "data-type",
     "named": false
   },
   {
@@ -357,6 +1074,10 @@
   {
     "type": "else",
     "named": false
+  },
+  {
+    "type": "empty",
+    "named": true
   },
   {
     "type": "eq",
@@ -507,10 +1228,6 @@
     "named": false
   },
   {
-    "type": "skip",
-    "named": false
-  },
-  {
     "type": "stop",
     "named": false
   },
@@ -525,6 +1242,10 @@
   {
     "type": "tail",
     "named": false
+  },
+  {
+    "type": "type_clock",
+    "named": true
   },
   {
     "type": "undefined",

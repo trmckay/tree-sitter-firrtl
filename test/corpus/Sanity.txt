@@ -1,0 +1,81 @@
+======
+Empty
+======
+
+circuit Circuit:
+  module Module:
+    skip
+
+---
+
+(circuit
+  (identifier)
+  (module
+    (identifier)
+    (empty)))
+
+===========
+Conditional
+===========
+
+circuit MyCircuit:
+  module MyModule:
+    when x:
+      skip
+    else:
+      skip
+
+---
+
+(circuit
+  (identifier)
+  (module
+    (identifier)
+    (conditional
+      (reference
+        (identifier))
+      (empty)
+      (empty))))
+
+=============================
+Parenthetical statement group
+=============================
+
+circuit MyCircuit:
+  module MyModule:
+      when x: (skip) else: (skip)
+
+---
+
+(circuit
+  (identifier)
+  (module
+    (identifier)
+    (conditional
+      (reference
+        (identifier))
+      (empty)
+      (empty))))
+
+=================
+Weird indentation
+=================
+
+circuit MyCircuit:
+  module MyModule:
+      when x:
+        skip
+       else:
+        skip
+
+---
+
+(circuit
+  (identifier)
+  (module
+    (identifier)
+    (conditional
+      (reference
+        (identifier))
+      (empty)
+      (empty))))
